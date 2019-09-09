@@ -1,25 +1,30 @@
 const dotenv = require("dotenv");
 const express = require("express");
+const bodyParser = require("body-parser");
 const persephonySDK = require("@persephony/sdk");
 
 dotenv.config();
 const app = express();
+app.use(bodyParser.json());
+
 const port = process.env.PORT || 3000;
-const accountId = process.env.accountId;
-const authToken = process.env.authToken;
+const accountId = process.env.ACCOUNT_ID;
+const authToken = process.env.AUTH_TOKEN;
 const persephony = persephonySDK(accountId, authToken);
-const to_phone_number = process.env.TO;
-const from_phone_number = process.env.FROM;
-const appId = process.env.appId;
+const persephony_phone_number = process.env.PERSEPHONY_PHONE_NUMBER;
+const appId = process.env.PERSEPHONY_APP_ID;
+
+console.log(`Running outgoing call app on port ${port}`);
 
 // Make an outgoing call when incoming requests on the /sendCall endpoint
 app.post("/sendCall", (req, res) => {
+  let destination_phone_number = req.body.destination_phone_number;
   var options = {};
 
   // create call using Persephony's api
   persephony.api.calls.create(
-    to_phone_number,
-    from_phone_number,
+    destination_phone_number,
+    persephony_phone_number,
     appId,
     options
   );
