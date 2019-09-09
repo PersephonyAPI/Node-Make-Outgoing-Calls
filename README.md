@@ -17,7 +17,7 @@ This project serves as a guide to help you build an application with Persephony.
 3. Next, link your Persephony number to your Persephony app. Go to the [My Numbers page](https://www.persephony.com/dashboard/portal/numbers) and click on the number you purchased in Step 1. Set the app to your new Make Outgoing Calls Application.
    ![Number Config](./images/NumberConfig.png)
 
-## Setting up the Movie Quote Application locally
+## Setting up the Making Outgoing Calls Application locally
 
 1. Clone or download this repo locally. To further understand the processes in this application, additional reading can be found in the [Getting Started Tutorial](https://persephony-docs.readme.io/docs/getting-started-with-persephony).
 2. Install the node packages necessary using command:
@@ -28,16 +28,14 @@ This project serves as a guide to help you build an application with Persephony.
 
 3. Configure environment variables (this tutorial uses the [dotenv package](https://www.npmjs.com/package/dotenv)).
 
-   | ENV VARIABLE            | DESCRIPTION                                                                                                                                                                   |
-   | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | ACCOUNT_ID              | Account ID which can be found under [API Keys](https://www.persephony.com/dashboard/portal/account/authentication) in Dashboard                                               |
-   | AUTH_TOKEN              | Authentication Token which can be found under [API Keys](https://www.persephony.com/dashboard/portal/account/authentication) in Dashboard                                     |
-   | PERSEPHONY_PHONE_NUMBER | Persephony Phone Number associated with Movie Quote Application found under [My Numbers](https://www.persephony.com/dashboard/portal/numbers) in Dashboard (**E.164 format**) |
-   | PERSEPHONY_APP_ID       | Application ID associated with Persephony Movie Quote Application found under [Apps](https://www.persephony.com/dashboard/portal/applications) in Dashboard                   |
+   | ENV VARIABLE            | DESCRIPTION                                                                                                                                                                             |
+   | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | ACCOUNT_ID              | Account ID which can be found under [API Keys](https://www.persephony.com/dashboard/portal/account/authentication) in Dashboard                                                         |
+   | AUTH_TOKEN              | Authentication Token which can be found under [API Keys](https://www.persephony.com/dashboard/portal/account/authentication) in Dashboard                                               |
+   | PERSEPHONY_PHONE_NUMBER | Persephony Phone Number associated with Making Outgoing Calls Application found under [My Numbers](https://www.persephony.com/dashboard/portal/numbers) in Dashboard (**E.164 format**) |
+   | PERSEPHONY_APP_ID       | Application ID associated with Persephony Making Outgoing Calls Application found under [Apps](https://www.persephony.com/dashboard/portal/applications) in Dashboard                   |
 
-## Using the Movie Quote Application
-
-### Responding to Incoming Calls and Texts
+## Using the Making Outgoing Calls Application to Make Calls
 
 1. Run the application using command:
 
